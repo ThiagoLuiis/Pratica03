@@ -68,11 +68,29 @@ public class App {
     }
 
     static void depositar() {
-        System.out.println("Função em desenvolvimento, ainda não disponível.");
+        System.out.print("ID da Conta: ");
+        int id = scanner.nextInt();
+        ContaCliente conta = contas.get(id);
+        if (conta == null) {
+            System.out.println("Conta não encontrada.");
+            return;
+        }
+        System.out.print("Valor a depositar: ");
+        double valor = scanner.nextDouble();
+        conta.addDeposito(valor);
     }
 
     static void sacar() {
-        System.out.println("Função em desenvolvimento, ainda não disponível.");
+        System.out.print("ID da Conta: ");
+        int id = scanner.nextInt();
+        ContaCliente conta = contas.get(id);
+        if (conta == null) {
+            System.out.println("Conta não encontrada.");
+            return;
+        }
+        System.out.print("Valor a sacar: ");
+        double valor = scanner.nextDouble();
+        conta.subSaldo(valor);
     }
 
     static void criarFatura() {
