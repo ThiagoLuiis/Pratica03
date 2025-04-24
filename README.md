@@ -1,18 +1,23 @@
-## Getting Started
+# 💳 PoC - Sistema de Gestão Financeira
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Este projeto é uma **Proof of Concept (PoC)** para uma empresa de soluções financeiras, desenvolvido pela UnGQS - Software. A aplicação foi criada em **Java** e roda no console, permitindo o gerenciamento de **clientes**, **contas** e **faturas**.
 
-## Folder Structure
+---
 
-The workspace contains two folders by default, where:
+## 🛠️ Tecnologias Utilizadas
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+- Java (JDK 17+)
+- Terminal (CLI)
+- Programação orientada a objetos
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+---
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+## 📚 Funcionalidades
 
-## Dependency Management
+- Cadastro de clientes com ID, nome e percentual de desconto
+- Criação de contas vinculadas a clientes com controle de saldo
+- Depósito e saque com validação de saldo
+- Criação de faturas com cálculo automático de desconto
+- Listagem de faturas com e sem desconto aplicado
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+---
