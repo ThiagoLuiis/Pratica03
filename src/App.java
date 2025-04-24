@@ -94,14 +94,31 @@ public class App {
     }
 
     static void criarFatura() {
-        System.out.println("Função em desenvolvimento, ainda não disponível.");
+        System.out.print("ID da Fatura: ");
+        int id = scanner.nextInt();
+        System.out.print("ID do Cliente: ");
+        int idCliente = scanner.nextInt();
+        Cliente cliente = clientes.get(idCliente);
+        if (cliente == null) {
+            System.out.println("Cliente não encontrado.");
+            return;
+        }
+        System.out.print("Valor da fatura: ");
+        double valor = scanner.nextDouble();
+        FaturaCliente fatura = new FaturaCliente(id, cliente, valor);
+        faturas.put(id, fatura);
+        System.out.println("Fatura criada com sucesso!");
     }
 
     static void exibirFaturas() {
-        System.out.println("Função em desenvolvimento, ainda não disponível.");
+        for (FaturaCliente f : faturas.values()) {
+            System.out.printf("%s | Valor com desconto: R$%.2f\n", f, f.getValorComDesconto());
+        }
     }
 
     static void exibirContas() {
-        System.out.println("Função em desenvolvimento, ainda não disponível.");
+        for (ContaCliente c : contas.values()) {
+            System.out.println(c);
+        }
     }
 }
